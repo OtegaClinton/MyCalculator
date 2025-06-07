@@ -1,0 +1,127 @@
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #1c1c27;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 1rem; 
+  box-sizing: border-box;
+}
+
+/* Calculator container */
+.calculator {
+  background: #252a4a;
+  padding: 1rem;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 320px; /* max width for larger screens */
+  box-sizing: border-box;
+}
+
+/* Display: flexible width, fixed max width */
+.display {
+  background: #2f3478;
+  color: white;
+  font-size: 2rem;
+  padding: 1.25rem 1.25rem;
+  border-radius: 20px;
+  text-align: right;
+  margin-bottom: 1.25rem;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+/* Buttons container: 4 equal columns, gap in rem */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  max-width: 100%;
+}
+
+/* Buttons: full width of grid cell, square using aspect ratio */
+.btn {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: #3a3d4d;
+  color: white;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* Operator buttons */
+.operator {
+  background-color: #ff9f0a;
+  color: white;
+}
+
+/* Equal button */
+.equal {
+  background-color: #d4d4d2;
+  color: black;
+  border-radius: 50%;
+}
+
+/* Clear button */
+.clear {
+  background-color: #ff3b3b;
+  color: white;
+}
+
+/* Backspace button with arrow icon */
+.backspace {
+  background-color: #d4d4d2;
+  color: black;
+  font-size: 0; /* Hide text */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.backspace::before {
+  content: "←";
+  font-size: 1.5rem;
+  color: black;
+  position: static;
+  transform: none;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 400px) {
+  .display {
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+
+  .btn {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .display {
+    font-size: 1.25rem;
+    padding: 0.75rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+  }
+}
