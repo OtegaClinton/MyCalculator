@@ -11,17 +11,17 @@ body {
   box-sizing: border-box;
 }
 
-/* Calculator container */
+
 .calculator {
   background: #252a4a;
   padding: 1rem;
   border-radius: 20px;
   width: 100%;
-  max-width: 320px; /* max width for larger screens */
+  max-width: 320px; 
   box-sizing: border-box;
 }
 
-/* Display: flexible width, fixed max width */
+
 .display {
   background: #2f3478;
   color: white;
@@ -37,7 +37,7 @@ body {
   box-sizing: border-box;
 }
 
-/* Buttons container: 4 equal columns, gap in rem */
+
 .buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -45,7 +45,7 @@ body {
   max-width: 100%;
 }
 
-/* Buttons: full width of grid cell, square using aspect ratio */
+
 .btn {
   width: 100%;
   aspect-ratio: 1 / 1;
@@ -65,30 +65,30 @@ body {
   transform: scale(1.05);
 }
 
-/* Operator buttons */
+
 .operator {
   background-color: #ff9f0a;
   color: white;
 }
 
-/* Equal button */
+
 .equal {
   background-color: #d4d4d2;
   color: black;
   border-radius: 50%;
 }
 
-/* Clear button */
+
 .clear {
   background-color: #ff3b3b;
   color: white;
 }
 
-/* Backspace button with arrow icon */
+
 .backspace {
   background-color: #d4d4d2;
   color: black;
-  font-size: 0; /* Hide text */
+  font-size: 0; 
   position: relative;
   display: flex;
   align-items: center;
