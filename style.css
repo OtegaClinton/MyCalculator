@@ -93,25 +93,37 @@ body {
   transform: none;
 }
 
-@media (max-width: 400px) {
-  .display {
-    font-size: clamp(1.25rem, 5vw, 1.5rem);
-    padding: 1rem;
-  }
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.5rem; /* smaller gap on all screens */
+  max-width: 100%;
+}
 
+.btn {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  font-size: clamp(1rem, 4vw, 1.5rem);
+  padding: 0; /* remove extra padding if any */
+  box-sizing: border-box;
+}
+
+/* On small phones, reduce gap & button font size */
+@media (max-width: 400px) {
+  .buttons {
+    gap: 0.3rem; /* even smaller gap */
+  }
   .btn {
-    font-size: clamp(1rem, 4vw, 1.25rem);
+    font-size: clamp(0.85rem, 3.5vw, 1.25rem);
   }
 }
 
 @media (max-width: 320px) {
-  .display {
-    font-size: clamp(1rem, 4vw, 1.25rem);
-    padding: 0.75rem;
+  .buttons {
+    gap: 0.2rem;
   }
-
   .btn {
-    font-size: clamp(0.85rem, 3vw, 1rem);
+    font-size: clamp(0.75rem, 3vw, 1rem);
   }
 }
 
